@@ -1,4 +1,4 @@
-# N-bit Unsigned Multiplier in Verilog
+# Dynamic n-bit Multiplier
 
 A parameterizable hardware multiplier that can handle multiplication of two N-bit unsigned binary numbers, generating a 2N-bit product. Built using array multiplier architecture with ripple carry adders. Automatically scales its hardware resources based on the bit width parameter, uses right number of gates/adders. 
 
@@ -126,7 +126,7 @@ For N-bit multiplication:
 - **Propagation Delay**: Proportional to N (due to ripple carry)
 - **Critical Path**: Through all RCA stages
 
-NOTE : Other multipliers like Wallace tree multiplier, Booth multiplier, Dadda Multiplier run faster and are space efficient (industrial level) and the implementation here does not exploit parallelism.
+NOTE : Above implementation includes complile time input size handling only - no runtime reconfiguration. Other multipliers like Wallace tree multiplier, Booth multiplier, Dadda Multiplier run faster and are space efficient (industrial level) and the implementation here does not exploit parallelism.
 
 ## File Structure
 
